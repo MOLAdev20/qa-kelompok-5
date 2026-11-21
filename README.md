@@ -67,4 +67,3 @@ Standar sistem manajemen keamanan informasi seperti ISO/IEC 27001 tidak diperlak
 
 ---
 
-**Catatan:** Repository ini adalah dokumentasi akademik. Jangan memasukkan kredensial, token, data pribadi pelanggan, atau informasi rahasia milik pengelola aplikasi.
