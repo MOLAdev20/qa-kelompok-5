@@ -15,15 +15,15 @@ Repositori ini disusun sebagai dokumentasi resmi kegiatan pengujian perangkat lu
 
 ### Informasi Akademik
 
-| Keterangan           | Informasi                                               |
-| -------------------- | ------------------------------------------------------- |
-| **Kelompok**         | `[Isi Nomor/Nama Kelompok]`                             |
-| **Kelas / Ruang**    | `[Isi Kelas, misal: 07TPLP001]`                         |
-| **Program Studi**    | Teknik Informatika _(atau sesuaikan dengan prodi Anda)_ |
-| **Fakultas**         | Ilmu Komputer                                           |
-| **Perguruan Tinggi** | Universitas Pamulang                                    |
-| **Mata Kuliah**      | Testing & QA Perangkat Lunak                            |
-| **Dosen Pengampu**   | `[Isi Nama Dosen Pengampu]`                             |
+| Keterangan           | Informasi                          |
+| -------------------- | ---------------------------------- |
+| **Kelompok**         | Kelompok 5                         |
+| **Kelas / Ruang**    | V.714                              |
+| **Program Studi**    | Teknik Informatika                 |
+| **Fakultas**         | Ilmu Komputer                      |
+| **Perguruan Tinggi** | Universitas Pamulang               |
+| **Mata Kuliah**      | Testing & QA Perangkat Lunak       |
+| **Dosen Pengampu**   | `ASEP ERLAN MAULANA S.KOM., M.KOM` |
 
 ## 🌐 Profil Objek Pengujian
 
