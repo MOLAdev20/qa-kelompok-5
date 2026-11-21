@@ -1,23 +1,21 @@
 # 02 — Standards & References
 
-Folder ini menyimpan standar, artikel ilmiah, dan landasan teori.
+Folder ini berisi register standar, pemetaan model kualitas, kajian literatur, dan alasan pemilihan metode pengujian.
 
-## Standar utama
+## Daftar dokumen
+- standard-register.md — register standar dan pengecekan tahun publikasi.
+- iso-29119-testing-process.md — konsep 29119 dan catatan proses pengujian.
+- iso-25010-quality-model.md — sembilan karakteristik kualitas dan pemetaan awal IdBotani.
+- literature-review-2022-2026.md — artikel ilmiah yang ditemukan dan status verifikasi SINTA.
+- method-selection-rationale.md — alasan pemilihan black-box, grey-box, white-box, dan automation.
+- standards-mapping.md — hubungan standar dengan aktivitas proyek.
 
-### ISO/IEC/IEEE 29119 series
-Digunakan sebagai acuan proses dan dokumentasi software testing. Catat bagian/part, edisi, tahun, judul resmi, dan ruang lingkupnya. Jangan mengutip klausul atau nomor bagian sebelum memeriksa sumber resmi.
+## Prinsip penggunaan
+1. ISO/IEC/IEEE 29119 digunakan sebagai referensi software testing; perhatikan tahun tiap part.
+2. ISO/IEC 25010:2023 digunakan sebagai model kualitas produk, bukan prosedur test execution.
+3. Sumber jurnal harus terbit 2022–2026 dan status SINTA 1–3 harus dibuktikan pada periode yang relevan.
+4. Jangan menyebut jurnal memenuhi syarat jika status atau masa akreditasinya belum diverifikasi.
+5. Jangan mengunggah standar berhak cipta secara penuh tanpa lisensi; simpan metadata dan ringkasan sendiri.
 
-### ISO/IEC 25010:2023
-Digunakan sebagai model kualitas produk perangkat lunak. Pilih karakteristik dan subkarakteristik yang benar-benar relevan dengan evaluasi website.
-
-## IEEE dan jurnal
-
-Jurnal internasional yang diminta tugas harus memenuhi batas tahun 2022–2026 dan ketentuan indeks SINTA 1–3 sesuai instruksi dosen. Catat judul, penulis, tahun, jurnal, DOI/URL, metode, temuan, dan bukti status indeks. Status SINTA merupakan indeks jurnal nasional; jangan menyamakan label SINTA dengan indeksasi internasional.
-
-## Aturan verifikasi
-
-- Prioritaskan katalog resmi ISO/IEC dan IEEE.
-- Catat edisi dan tahun publikasi yang benar.
-- Jangan mengunggah salinan standar berhak cipta tanpa lisensi.
-- Simpan metadata dan ringkasan/parafrasa sendiri.
-- Jangan menyatakan jurnal memenuhi kriteria sebelum memeriksa tahun dan status indeksnya.
+## Catatan rentang tahun
+ISO/IEC/IEEE 29119-2:2021 adalah dokumen proses yang relevan tetapi berada di luar batas publikasi 2022–2026. Lihat standard-register.md dan mintakan persetujuan dosen jika perlu dipakai sebagai pengecualian.
