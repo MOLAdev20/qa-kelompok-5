@@ -1,0 +1,11 @@
+Test Case ID,Type,Area,Scenario,Precondition,Test Data,Steps,Expected Result,Actual Result,Status,Evidence,Tester,Execution Date
+IDB-BB-001,Black-box,Homepage,Open homepage,Public access available,None,Open https://idbotani.com/,Homepage and main elements render, ,NOT RUN,,, 
+IDB-BB-002,Black-box,Navigation,Open a product category,Homepage available,Visible category,Select category,Correct category page/results appear, ,NOT RUN,,,
+IDB-BB-003,Black-box,Search,Search matching keyword,Search available,Existing product keyword,Enter keyword and submit,Relevant result or informative state appears, ,NOT RUN,,,
+IDB-BB-004,Black-box,Search,Search unmatched keyword,Search available,Unique unmatched keyword,Enter keyword and submit,No-result state is informative, ,NOT RUN,,,
+IDB-BB-005,Black-box,Product,Open product detail,Product listed,Visible product,Select product,Available product details are displayed, ,NOT RUN,,,
+IDB-BB-006,Black-box,Authentication,Open login page,Public access available,None,Select login,Login flow is displayed, ,NOT RUN,,,
+IDB-BB-007,Black-box,Cart,Add product to cart,Approved test account and permission,Test product,Sign in and add test product,Cart reflects correct item and quantity, ,BLOCKED,,,
+IDB-BB-008,Black-box,Order,Submit test order,Approved sandbox and test account,Dummy order data,Complete approved sandbox flow,Test order is recorded without real payment, ,BLOCKED,,,
+IDB-BB-009,Black-box,Tracking,View own test order status,Test order exists,Own dummy order,Open tracking for own test order,Correct status is displayed, ,BLOCKED,,,
+IDB-BB-010,Black-box,Responsive,Inspect mobile viewport,Public access available,390x844 viewport,Inspect page at mobile viewport,Content and navigation remain usable, ,NOT RUN,,,
