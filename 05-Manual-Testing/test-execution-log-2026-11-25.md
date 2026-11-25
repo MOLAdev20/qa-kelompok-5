@@ -6,11 +6,11 @@
 **Standar:** ISO/IEC/IEEE 29119 (black-box, sesuai test-plan.md repo)
 **Sumber test case:** 04-Test-Cases/test-cases.csv (IDB-BB-001 s.d. IDB-BB-010)
 
-Pengujian interaktif dilakukan 18.41–18.42 WIB lewat cloud browser. Screenshot bukti (PNG) diambil 18.57–18.58 WIB pada halaman yang sama sebagai arsip evidence. Semua pengujian non-destructive: tidak ada pesanan dibuat, tidak ada pembayaran, tidak ada data diubah. Pada uji login tidak dimasukkan email/nomor apa pun, tidak dipicu OTP, tidak dicoba login Google maupun Lupa Password.
+Pengujian interaktif dilakukan 18.41–18.42 WIB lewat cloud browser. Screenshot bukti (PNG) diambil 18.57–18.58 WIB pada halaman yang sama sebagai arsip evidence. Semua pengujian non-destructive: tidak ada pesanan dibuat, tidak ada pembayaran, tidak ada data diubah. Sesi malam (20.43–20.49 WIB): akun uji ramanitiak dibuat atas perintah tester; alur OTP nyata diuji (lihat IDB-BB-006) dan keranjang diuji (IDB-BB-007). Google Login dan Lupa Password masih belum diuji.
 
 ## Ringkasan
-- **7 PASS, 0 FAIL, 0 BLOCKED** (dari 7 test case yang dijalankan)
-- Tidak ditemukan cacat fungsional. Dua catatan minor (kosmetik).
+- **8 PASS, 0 FAIL, 2 BLOCKED** (dari 10 test case: 001–007 dan 010 PASS; 008–009 masih BLOCKED)
+- Satu cacat pengiriman OTP (High) + satu masalah keamanan OTP (High) pada IDB-BB-006; dua catatan minor pada IDB-BB-007; satu catatan kosmetik pada IDB-BB-005.
 
 ## Hasil per test case
 
@@ -46,11 +46,21 @@ Pengujian interaktif dilakukan 18.41–18.42 WIB lewat cloud browser. Screenshot
 - **Bukti:** 05-Manual-Testing/testing-evidence/IDB-BB-005/step-01-detail-wingko.png
 - **Catatan minor:** Harga di halaman detail tertulis "3,500" tanpa awalan "Rp", sedangkan di daftar produk tertulis "Rp 3.500" — inkonsistensi format harga (kosmetik, severity Low).
 
-### IDB-BB-006 Authentication — PASS (tampilan alur login)
+### IDB-BB-006 Authentication — PASS (tampilan + verifikasi OTP nyata)
 - **Langkah:** Buka halaman login https://idbotani.com/auth/login#sign-in (tab Masuk)
 - **Hasil aktual:** Tab "Masuk" aktif dan menampilkan form login: teks "Masukkan alamat email atau no Whatsapp anda untuk mengirimkan kode OTP", kolom "Email / No. Handphone", tombol "Masuk", tautan "Lupa Password?", "Belum punya akun? Daftar sekarang!", bagian "metode lainnya" dengan tombol "Google" (merah), dan "Kembali Ke Halaman awal". Semua elemen alur login tampil. Tidak dimasukkan data apa pun.
 - **Bukti:** 05-Manual-Testing/testing-evidence/IDB-BB-006/step-01-login.png
-- **Batasan:** Uji OTP / Google Login / Lupa Password yang sebenarnya TIDAK dijalankan — butuh akun/email/WA dan akan memicu OTP sungguhan di situs live. Perlu akun uji yang disetujui atau arahan kelompok.
+- **Alur nyata (20.43–20.48 WIB):** Akun uji ramanitiak (ID Konsumen 20261125-0950) didaftarkan lewat tab Daftar. Situs mengklaim kode OTP dikirim ke WA dan email; kode TIDAK PERNAH sampai — tidak ada di WhatsApp, tidak ada di Gmail (Inbox, Spam, All Mail diperiksa; kirim ulang juga tidak sampai). Verifikasi berhasil memakai kode 6 digit yang sudah terisi di kolom form halaman OTP itu sendiri (https://idbotani.com/members/otp). Profil menampilkan "SUKSES - Two Factor Verification". Status Akun masih "UNVERIFIED" (verifikasi identitas terpisah, tidak disentuh).
+- **Temuan:** (1) Defect pengiriman OTP — klaim terkirim tapi tidak ada yang sampai, bahkan setelah kirim ulang (High). (2) Kode OTP ditampilkan langsung di halaman verifikasi (High, keamanan). Google Login dan Lupa Password masih BELUM diuji.
+
+
+### IDB-BB-007 Cart — PASS
+- **Langkah:** Login sebagai ramanitiak, buka detail Wingko, klik "+ Keranjang" (kuantitas awal 1), buka halaman keranjang, lalu hapus item dan reload untuk verifikasi akhir
+- **URL:** https://idbotani.com/produk/detail/wingko-171448 dan https://idbotani.com/produk/keranjang
+- **Hasil aktual:** Popup "Berhasil Ditambahkan"; badge keranjang 0 → 1. Di keranjang Wingko ADA: penjual Gudeg Senthong Wetan, dikirim dari BOGOR, Pre-order 2 Hari, Berat 0 Gram, Status Order "Pending", Rp 3.500 per Pc. Kuantitas tercatat 10 (bukan 1) — situs otomatis menaikkan ke Minimal Order 10 Pc; Subtotal Rp 35.000, Total Rp 35.000. Setelah dihapus dan reload, keranjang TERKONFIRMASI KOSONG di semua tempat dan tombol "Lanjut ke Pembayaran" hilang.
+- **Bukti:** 05-Manual-Testing/testing-evidence/IDB-BB-007/execution-notes.md (file PNG menyusul dari Chrome tester — halaman login tidak bisa di-capture jadi file lewat metode screenshot sesi ini)
+- **Temuan minor:** (1) Kuantitas dinaikkan 1 → 10 tanpa pemberitahuan eksplisit saat menambah. (2) Panel mini-keranjang dan ringkasan sempat menampilkan item yang sudah dihapus sampai halaman dimuat ulang.
+- **Catatan:** Tidak ada checkout, alamat, pembayaran, atau pesanan yang dibuat — non-destructive.
 
 ### IDB-BB-010 Responsive (390x844) — PASS
 - **Langkah:** Buka homepage pada viewport 390x844 (emulasi mobile)
@@ -58,9 +68,8 @@ Pengujian interaktif dilakukan 18.41–18.42 WIB lewat cloud browser. Screenshot
 - **Bukti:** 05-Manual-Testing/testing-evidence/IDB-BB-010/step-01-mobile-390x844.png
 
 ## Tidak dijalankan (sesuai CSV — BLOCKED)
-- **IDB-BB-007 Cart** — BLOCKED: perlu approved test account and permission.
-- **IDB-BB-008 Order** — BLOCKED: perlu approved sandbox and test account.
-- **IDB-BB-009 Tracking** — BLOCKED: perlu approved test account.
+- **IDB-BB-008 Order** — BLOCKED: perlu approved sandbox and test account (pesanan sungguhan tidak boleh dibuat di situs live).
+- **IDB-BB-009 Tracking** — BLOCKED: perlu ada pesanan uji (tergantung 008).
 
 ## Catatan tentang timeline
 - Timeline PDF repo hanya memakai Week 0–8 tanpa tanggal kalender — 25 Nov 2026 tidak bisa dipetakan ke Week tertentu. Modul Auth (Functional QA Auth) dijadwalkan Week 3.
