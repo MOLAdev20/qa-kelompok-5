@@ -58,7 +58,7 @@ Pengujian interaktif dilakukan 18.41–18.42 WIB lewat cloud browser. Screenshot
 - **Langkah:** Login sebagai ramanitiak, buka detail Wingko, klik "+ Keranjang" (kuantitas awal 1), buka halaman keranjang, lalu hapus item dan reload untuk verifikasi akhir
 - **URL:** https://idbotani.com/produk/detail/wingko-171448 dan https://idbotani.com/produk/keranjang
 - **Hasil aktual:** Popup "Berhasil Ditambahkan"; badge keranjang 0 → 1. Di keranjang Wingko ADA: penjual Gudeg Senthong Wetan, dikirim dari BOGOR, Pre-order 2 Hari, Berat 0 Gram, Status Order "Pending", Rp 3.500 per Pc. Kuantitas tercatat 10 (bukan 1) — situs otomatis menaikkan ke Minimal Order 10 Pc; Subtotal Rp 35.000, Total Rp 35.000. Setelah dihapus dan reload, keranjang TERKONFIRMASI KOSONG di semua tempat dan tombol "Lanjut ke Pembayaran" hilang.
-- **Bukti:** 05-Manual-Testing/testing-evidence/IDB-BB-007/execution-notes.md (file PNG menyusul dari Chrome tester — halaman login tidak bisa di-capture jadi file lewat metode screenshot sesi ini)
+- **Bukti:** 05-Manual-Testing/testing-evidence/IDB-BB-007/step-01-keranjang-wingko.png (screenshot dari Chrome tester, 20.54 WIB)
 - **Temuan minor:** (1) Kuantitas dinaikkan 1 → 10 tanpa pemberitahuan eksplisit saat menambah. (2) Panel mini-keranjang dan ringkasan sempat menampilkan item yang sudah dihapus sampai halaman dimuat ulang.
 - **Catatan:** Tidak ada checkout, alamat, pembayaran, atau pesanan yang dibuat — non-destructive.
 
