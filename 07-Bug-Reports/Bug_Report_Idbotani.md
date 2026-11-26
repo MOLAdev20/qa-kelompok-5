@@ -6,7 +6,7 @@
 - **Lingkungan:** Cloud browser, desktop Chrome, viewport 1920x1080; Chrome di laptop tester (screenshot keranjang IDB-BB-007)
 - **Akun uji:** ramanitiak (ID Konsumen 20261125-0950), dibuat 25 Nov 2026 untuk pengujian
 - **Catatan:** Semua defect di bawah ini sudah diverifikasi lewat pengujian langsung, bukan asumsi. Pengujian non-destructive: tidak ada pesanan, pembayaran, atau data yang dibuat/dibuat.
-- **Retest:** Kamis, 26 November 2026, 08:43–08:49 WIB — kelima bug masih reproduksi (lihat "Retest result" tiap bug). Lupa Password: permintaan reset terkirim ("Permintaan terkirim!, Cek email anda"); kedatangan email reset di Gmail masih menunggu pengecekan. Google Login: pending klik pengguna di pemilih akun Google.
+- **Retest:** Kamis, 26 November 2026, 08:43–08:49 WIB — kelima bug masih reproduksi (lihat "Retest result" tiap bug). Lupa Password: permintaan reset terkirim ("Permintaan terkirim!, Cek email anda"); kedatangan email reset di Gmail masih menunggu pengecekan. Google Login: pending klik pengguna di pemilih akun Google. Sore harinya, pengujian OJEK (IDB-BB-011–018) menemukan IDB-BUG-006.
 
 ## Ringkasan
 
@@ -17,6 +17,7 @@
 | IDB-BUG-003 | Kuantitas otomatis naik ke minimal order tanpa pemberitahuan | Low | P3 | IDB-BB-007 | Open |
 | IDB-BUG-004 | Mini-keranjang dan ringkasan tidak refresh setelah item dihapus | Low | P3 | IDB-BB-007 | Open |
 | IDB-BUG-005 | Format harga di detail produk tanpa awalan "Rp" | Low | P4 | IDB-BB-005 | Open |
+| IDB-BUG-006 | Daftar Produk OJEK tidak tampil untuk tamu | Low | P3 | IDB-BB-015 | Open |
 
 ---
 
@@ -128,3 +129,25 @@
 - **Reporter / date:** RAMA NITTIA KHADIFA / 25 Nov 2026
 - **Status:** Open
 - **Retest result:** 26 Nov 2026, 08:43 WIB — harga detail Wingko tetap '3,500' tanpa 'Rp' (bukti: step-02-retest-detail-wingko-2026-11-26.png). Status tetap Open.
+
+---
+
+## IDB-BUG-006 — Daftar Produk OJEK tidak tampil untuk tamu
+
+- **Bug ID:** IDB-BUG-006
+- **Title:** Daftar Produk OJEK tidak tampil untuk tamu
+- **Related Test Case ID:** IDB-BB-015
+- **Environment / browser / device:** https://idbotani.com/k/ojek (live), Chrome di laptop tester, sebagai tamu (tanpa login)
+- **Precondition:** Halaman Pemesanan Kurir terbuka
+- **Steps to reproduce:**
+  1. Buka https://idbotani.com/k/ojek sebagai tamu.
+  2. Perhatikan formulir: Nama, No. WhatsApp, Alamat Jemput, Alamat Tujuan, Hitung Ongkir, Catatan, "Pesan Sekarang".
+  3. Cari bagian "Daftar Produk" atau kolom nama produk dan qty.
+- **Expected result:** Ada bagian "Daftar Produk" dengan kolom nama barang dan qty, sesuai teks "Khusus layanan Delivery/Belanja. Isi nama barang dan qty." yang tampil di halaman.
+- **Actual result:** Tidak ada bagian "Daftar Produk" maupun kolom nama produk dan qty. Pencarian teks "Produk" di seluruh halaman hanya menemukan menu "Kategori Produk". Widget OJEK di beranda juga tidak memiliki Daftar Produk.
+- **Severity:** Low
+- **Priority:** P3
+- **Evidence path:** `05-Manual-Testing/testing-evidence/IDB-BB-015/execution-notes.md`
+- **Reporter / date:** RAMA NITTIA KHADIFA / 26 Nov 2026
+- **Status:** Open
+- **Catatan:** Perlu dicek saat login — kemungkinan fitur hanya tersedia untuk pengguna login. Kalau begitu, test case IDB-BB-015 perlu diubah precondition-nya menjadi login.
