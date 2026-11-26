@@ -6,6 +6,7 @@
 - **Lingkungan:** Cloud browser, desktop Chrome, viewport 1920x1080; Chrome di laptop tester (screenshot keranjang IDB-BB-007)
 - **Akun uji:** ramanitiak (ID Konsumen 20261125-0950), dibuat 25 Nov 2026 untuk pengujian
 - **Catatan:** Semua defect di bawah ini sudah diverifikasi lewat pengujian langsung, bukan asumsi. Pengujian non-destructive: tidak ada pesanan, pembayaran, atau data yang dibuat/dibuat.
+- **Retest:** Kamis, 26 November 2026, 08:43–08:49 WIB — kelima bug masih reproduksi (lihat "Retest result" tiap bug). Lupa Password: permintaan reset terkirim ("Permintaan terkirim!, Cek email anda"); kedatangan email reset di Gmail masih menunggu pengecekan. Google Login: pending klik pengguna di pemilih akun Google.
 
 ## Ringkasan
 
@@ -38,7 +39,7 @@
 - **Evidence path:** `05-Manual-Testing/testing-evidence/IDB-BB-006/execution-notes.md`
 - **Reporter / date:** RAMA NITTIA KHADIFA / 25 Nov 2026
 - **Status:** Open
-- **Retest result:** —
+- **Retest result:** 26 Nov 2026, 08:45 WIB — OTP diminta lagi saat login ulang sebagai ramanitiak; kode tetap tampil di halaman OTP (IDB-BUG-002 masih ada), jadi pengiriman ke WA/email tidak terverifikasi ulang dari sisi situs. Kedatangan email reset/Lupa Password di Gmail masih menunggu pengecekan. Status tetap Open.
 
 ---
 
@@ -60,7 +61,7 @@
 - **Evidence path:** `05-Manual-Testing/testing-evidence/IDB-BB-006/execution-notes.md`
 - **Reporter / date:** RAMA NITTIA KHADIFA / 25 Nov 2026
 - **Status:** Open
-- **Retest result:** —
+- **Retest result:** 26 Nov 2026, 08:45 WIB — keenam kotak kode tetap terisi otomatis oleh halaman saat pertama tampil; verifikasi berhasil tanpa kode dari channel resmi. Status tetap Open.
 
 ---
 
@@ -82,7 +83,7 @@
 - **Evidence path:** `05-Manual-Testing/testing-evidence/IDB-BB-007/step-01-keranjang-wingko.png`, `05-Manual-Testing/testing-evidence/IDB-BB-007/execution-notes.md`
 - **Reporter / date:** RAMA NITTIA KHADIFA / 25 Nov 2026
 - **Status:** Open
-- **Retest result:** —
+- **Retest result:** 26 Nov 2026, 08:46 WIB — tambah Wingko qty 1 → keranjang tercatat Qty 10, Subtotal/Total Rp 35.000, tanpa pemberitahuan minimal order. Status tetap Open.
 
 ---
 
@@ -104,7 +105,7 @@
 - **Evidence path:** `05-Manual-Testing/testing-evidence/IDB-BB-007/execution-notes.md`
 - **Reporter / date:** RAMA NITTIA KHADIFA / 25 Nov 2026
 - **Status:** Open
-- **Retest result:** —
+- **Retest result:** 26 Nov 2026, 08:47 WIB — setelah hapus tanpa reload, ringkasan tetap Subtotal/Total Rp 35.000 + tombol 'Lanjut ke Pembayaran'; panel mini-keranjang masih menampilkan Wingko; setelah reload keranjang kosong. Status tetap Open.
 
 ---
 
@@ -126,4 +127,4 @@
 - **Evidence path:** `05-Manual-Testing/testing-evidence/IDB-BB-005/step-01-detail-wingko.png`, `05-Manual-Testing/testing-evidence/IDB-BB-005/execution-notes.md`
 - **Reporter / date:** RAMA NITTIA KHADIFA / 25 Nov 2026
 - **Status:** Open
-- **Retest result:** —
+- **Retest result:** 26 Nov 2026, 08:43 WIB — harga detail Wingko tetap '3,500' tanpa 'Rp' (bukti: step-02-retest-detail-wingko-2026-11-26.png). Status tetap Open.
