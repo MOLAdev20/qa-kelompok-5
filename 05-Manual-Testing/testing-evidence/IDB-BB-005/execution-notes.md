@@ -11,3 +11,4 @@
 - **Bukti:** step-01-detail-wingko.png
 - **Catatan minor:** Harga di halaman detail tertulis "3,500" tanpa awalan "Rp", sedangkan di daftar produk tertulis "Rp 3.500" — inkonsistensi format harga (kosmetik, severity Low).
 - **Retest 26 Nov 2026, 08.43 WIB:** Harga detail Wingko TETAP "3,500" tanpa "Rp" (screenshot Microlink step-02-retest-detail-wingko-2026-11-26.png; "Dilihat 59 kali", sebelumnya 54). IDB-BUG-005 tetap Open.
+- **Retest 27 Nov 2026, 08.43–08.44 WIB:** Harga detail Wingko TETAP "3,500" tanpa "Rp" (screenshot step-03-retest-detail-wingko-2026-11-27.png; "Dilihat 62 kali" saat pertama dibuka, 63 kali saat dibuka lagi — penghitung bertambah setiap kunjungan). IDB-BUG-005 tetap Open.
