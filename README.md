@@ -2,6 +2,34 @@
 
 Repositori ini disusun sebagai dokumentasi resmi kegiatan pengujian perangkat lunak (_Software Testing & Quality Assurance_) terhadap aplikasi berbasis web **Idbotani** (`https://idbotani.com/`). Proyek ini dibuat untuk memenuhi tugas kelompok mata kuliah **Testing & QA Perangkat Lunak** di **Universitas Pamulang**.
 
+## 🗓️ Timeline Pengujian (Week 0–8)
+
+![Timeline QA Testing Idbotani — Week 0–8](01-Project-Overview/Timeline_per_28_nov.jpeg)
+
+Jadwal pelaksanaan pengujian mengikuti _QA Testing Idbotani Project Plan_ (Week 0–8, sampai Sign-Off di Week 8). Dokumen sumber: [Timeline QA Testing Botani new.pdf](01-Project-Overview/Timeline%20QA%20Testing%20Botani%20new.pdf) dan [Timeline QA Testing Botani.xlsx](01-Project-Overview/Timeline%20QA%20Testing%20Botani.xlsx).
+
+## 🧭 Jelajahi Repositori
+
+Klik tautan di bawah untuk langsung membuka folder yang dicari, tanpa menelusuri repositori satu per satu:
+
+- [01-Project-Overview](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/01-Project-Overview) — profil, latar belakang, scope, timeline
+- [02-Standards-References](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/02-Standards-References) — ISO 25010, ISO/IEC/IEEE 29119, literature review
+- [03-QA-Planning](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/03-QA-Planning) — test plan, strategi, jadwal, task distribution
+- [04-Test-Cases](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/04-Test-Cases) — test-cases.csv (IDB-BB-001 s.d. 018)
+- [05-Manual-Testing](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/05-Manual-Testing) — log eksekusi, evidence, metrik
+- [06-Automation-Testing](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/06-Automation-Testing) — skrip Playwright read-only, regression plan
+- [07-Bug-Reports](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/07-Bug-Reports) — laporan bug & evidence
+- [08-Interview](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/08-Interview) — pertanyaan wawancara
+- [09-Final-Report](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/09-Final-Report) — draf laporan akhir
+
+## 📝 Catatan Dosen
+
+Sesuai arahan dosen pengampu:
+
+- Acuan plan testing berdasarkan standar ISO yang dipilih kelompok: **ISO/IEC/IEEE 29119** (Part 1–4) untuk proses dan dokumentasi pengujian, dan **ISO/IEC 25010** untuk model kualitas produk. Lihat [02-Standards-References](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/02-Standards-References).
+- Timeline pengujian ditaruh di halaman depan README ini (bagian 🗓️ Timeline Pengujian di atas).
+- README dibuat interaktif: tidak perlu masuk-masuk folder — setiap bagian dilengkapi tautan langsung ke folder/file terkait (lihat 🧭 Jelajahi Repositori di atas), jadi pemeriksa bisa langsung membuka folder yang dicari.
+
 ## 📋 Identitas Penyusun
 
 ### Anggota Kelompok
