@@ -99,6 +99,20 @@ Berikut adalah struktur direktori yang digunakan untuk mengorganisasi dokumen pe
 └── 09-Final-Report/             # Draf laporan akhir (laporan-akhir-qa-idbotani.md)
 ```
 
+## 🗓️ Timeline Pengujian
+
+Jadwal pelaksanaan pengujian mengikuti rencana 6 fase (Week 0–8) pada dokumen
+[Timeline QA Testing Botani new.pdf](01-Project-Overview/Timeline%20QA%20Testing%20Botani%20new.pdf).
+
+| Fase | Kegiatan | PIC |
+| ---- | -------- | --- |
+| I | Inisiasi & Persiapan Pengujian (Planning & Setup) — penentuan objek uji, Project Overview & ruang lingkup, studi standar ISO/IEC/IEEE 29119, Test Plan, penyiapan perangkat/browser & template | All Team |
+| II | Perancangan Skenario & Test Case (Test Design) — Test Case per modul: Autentikasi & Akun, Katalog/Pencarian/Keranjang, OJEK & Konfirmasi, UI/UX/Bahasa/Responsivitas; review & persetujuan Test Case | Functional QA |
+| III | Eksekusi Pengujian (Test Execution) — eksekusi per modul, Execution Log & screenshot bukti, pencatatan bug ke Bug Report | Functional QA |
+| IV | Verifikasi & Cross-Testing (Re-Testing) — cross-check bug, validasi ulang status Test Case, ringkasan metrik, wawancara ahli/profesional | QA Lead & Team |
+| V | Dokumentasi Akhir & Pengumpulan (Sign-Off) — Test Summary mengacu ISO/IEC/IEEE 29119-3, review akhir & pengumpulan | QA Lead & Team |
+| VI | Resource Summary — 4 anggota tim, objek uji IdBotani (live, non-destruktif), perangkat & browser, tools dokumentasi, standar ISO 29119 | QA Lead & Team |
+
 ## 📊 Ringkasan Hasil Pengujian
 
 Per 27 Nov 2026, dari `04-Test-Cases/test-cases.csv` (18 test case IDB-BB-001 s.d. 018).
