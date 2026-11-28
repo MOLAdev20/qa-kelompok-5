@@ -80,39 +80,44 @@ _(Sesuaikan daftar di bawah ini dengan alat bantu yang digunakan oleh kelompok A
 - **Peramban (_Browser_):** Google Chrome, Mozilla Firefox, Microsoft Edge.
 - **Dokumentasi _Test Case_ & _Bug Report_:** Microsoft Excel / Google Sheets / Markdown.
 - **Alat Inspeksi & Performa:** Chrome DevTools, Google Lighthouse.
-- **Alat Otomasi _(Opsional)_:** `[Sebutkan jika menggunakan Selenium / Cypress / Katalon / Playwright]`
+- **Alat Otomasi:** Playwright (Node.js) untuk UI read-only — skrip di `06-Automation-Testing/scripts/`, acuan Pertemuan 10 (Selenium/Cypress dibahas sebagai pembanding di `06-Automation-Testing/README.md`). API (Postman/Newman) belum digunakan karena tidak ada akses/dokumentasi API resmi.
 
 ## 📁 Struktur Repositori
 
 Berikut adalah struktur direktori yang digunakan untuk mengorganisasi dokumen pengujian di dalam repositori ini:
 
 ```text
-├── README.md                    # Dokumentasi utama repositori
-├── docs/
-│   ├── Test_Plan.pdf            # Dokumen Rencana Pengujian (Test Plan)
-│   └── Laporan_Akhir_QA.pdf     # Laporan lengkap hasil pengujian
-├── test-cases/
-│   └── Test_Cases_Idbotani.xlsx # Daftar skenario dan kasus uji (Test Case)
-├── bug-reports/
-│   └── Bug_Report_Idbotani.md   # Dokumentasi temuan cacat/bug secara terperinci
-└── evidence/
-    ├── screenshots/             # Tangkapan layar bukti pengujian & temuan bug
-    └── videos/                  # Rekaman layar (screen recording) alur pengujian
+├── README.md
+├── 01-Project-Overview/         # Profil, latar belakang, scope, timeline
+├── 02-Standards-References/     # ISO 25010, ISO 29119, literature review
+├── 03-QA-Planning/              # Test plan, strategi, jadwal, task distribution
+├── 04-Test-Cases/               # test-cases.csv (IDB-BB-001 s.d. 018)
+├── 05-Manual-Testing/           # Log eksekusi 25–27 Nov, evidence, metrik
+├── 06-Automation-Testing/       # Skrip Playwright read-only, regression plan
+├── 07-Bug-Reports/              # Bug_Report_Idbotani.md (IDB-BUG-001 s.d. 006)
+├── 08-Interview/                # Pertanyaan wawancara (belum dilakukan)
+└── 09-Final-Report/             # Draf laporan akhir (laporan-akhir-qa-idbotani.md)
 ```
 
-## 📊 Ringkasan Hasil Pengujian _(Templat)_
+## 📊 Ringkasan Hasil Pengujian
 
-Silakan perbarui tabel berikut setelah seluruh rangkaian pengujian selesai dilaksanakan:
+Per 27 Nov 2026, dari `04-Test-Cases/test-cases.csv` (18 test case IDB-BB-001 s.d. 018).
+Detail per area ada di `09-Final-Report/laporan-akhir-qa-idbotani.md`.
+Automation Playwright (AT-01 s.d. AT-08) sudah dibuat 28 Nov 2026 tetapi belum dieksekusi,
+jadi belum masuk hitungan di bawah ini.
 
 | Modul yang Diuji               | Total _Test Case_ | _Passed_ | _Failed_ | _Blocked_ | Persentase Keberhasilan |
 | ------------------------------ | :---------------: | :------: | :------: | :-------: | :---------------------: |
-| Autentikasi (Login/Register)   |        `0`        |   `0`    |   `0`    |    `0`    |          `0%`           |
-| Pencarian & Filter Produk      |        `0`        |   `0`    |   `0`    |    `0`    |          `0%`           |
-| Keranjang Belanja              |        `0`        |   `0`    |   `0`    |    `0`    |          `0%`           |
-| Layanan Ojek / Pengiriman      |        `0`        |   `0`    |   `0`    |    `0`    |          `0%`           |
-| Konfirmasi & Pelacakan Pesanan |        `0`        |   `0`    |   `0`    |    `0`    |          `0%`           |
-| Antarmuka & Responsivitas      |        `0`        |   `0`    |   `0`    |    `0`    |          `0%`           |
-| **Total Keseluruhan**          |      **`0`**      | **`0`**  | **`0`**  |  **`0`**  |        **`0%`**         |
+| Autentikasi (Login/Register)   |        `1`        |   `1`    |   `0`    |    `0`    |         `100%`          |
+| Pencarian & Filter Produk      |        `2`        |   `2`    |   `0`    |    `0`    |         `100%`          |
+| Keranjang Belanja              |        `1`        |   `1`    |   `0`    |    `0`    |         `100%`          |
+| Layanan Ojek / Pengiriman      |        `7`        |   `6`    |   `1`    |    `0`    |          `86%`          |
+| Konfirmasi & Pelacakan Pesanan |        `2`        |   `0`    |   `0`    |    `2`    |          `0%`           |
+| Antarmuka & Responsivitas      |        `5`        |   `5`    |   `0`    |    `0`    |         `100%`          |
+| **Total Keseluruhan**          |      **`18`**     | **`15`** | **`1`**  |  **`2`**  |        **`83%`**        |
+
+Catatan: 6 bug masih Open (IDB-BUG-001 s.d. 006, 2 High/P1 soal OTP).
+Lihat `07-Bug-Reports/Bug_Report_Idbotani.md`.
 
 ## ⚠️ Pernyataan Akademik (_Disclaimer_)
 
