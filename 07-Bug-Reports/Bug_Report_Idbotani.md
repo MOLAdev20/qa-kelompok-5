@@ -8,6 +8,7 @@
 - **Catatan:** Semua defect di bawah ini sudah diverifikasi lewat pengujian langsung, bukan asumsi. Pengujian non-destructive: tidak ada pesanan, pembayaran, atau data yang dibuat/dibuat.
 - **Retest:** Kamis, 26 November 2026, 08:43–08:49 WIB — kelima bug masih reproduksi (lihat "Retest result" tiap bug). Lupa Password: permintaan reset terkirim ("Permintaan terkirim!, Cek email anda"); kedatangan email reset di Gmail masih menunggu pengecekan. Google Login: pending klik pengguna di pemilih akun Google. Sore harinya, pengujian OJEK (IDB-BB-011–018) menemukan IDB-BUG-006.
 - **Retest:** Jumat, 27 November 2026, 08:43–08:49 WIB — keenam bug masih reproduksi (lihat "Retest result" tiap bug). Lupa Password: permintaan reset terkirim lagi 08.47 WIB; email reset TIDAK DITEMUKAN di Gmail per 08.48 WIB (cek ulang 28 Nov). Google Login: masih pending klik pengguna. Re-check IDB-BB-015 saat login: Daftar Produk tetap tidak ada — login bukan penyebab IDB-BUG-006.
+- **Retest:** Sabtu, 28 November 2026, 08:43–08:48 WIB — keenam bug masih reproduksi (lihat "Retest result" tiap bug). Lupa Password: email reset yang diminta 27 Nov 08.47 WIB TIDAK DITEMUKAN di Gmail setelah ~24 jam (Inbox/Spam/All Mail dicari; email terbaru wondr 28 Nov 02.25 WIB) — keterlambatan kini tersingkir, mendukung IDB-BUG-001. Google Login: tab pemilih akun dari 27 Nov sudah tertutup; masih pending klik pengguna. Re-check IDB-BB-015 saat login: Daftar Produk tetap tidak ada.
 
 ## Ringkasan
 
@@ -43,6 +44,7 @@
 - **Status:** Open
 - **Retest result:** 26 Nov 2026, 08:45 WIB — OTP diminta lagi saat login ulang sebagai ramanitiak; kode tetap tampil di halaman OTP (IDB-BUG-002 masih ada), jadi pengiriman ke WA/email tidak terverifikasi ulang dari sisi situs. Kedatangan email reset/Lupa Password di Gmail masih menunggu pengecekan. Status tetap Open.
 - **Retest result:** 27 Nov 2026, 08.44 WIB — OTP diminta lagi; kode tetap tampil di halaman OTP. Email reset Lupa Password (diminta 08.47 WIB) tidak ditemukan di Gmail per 08.48 WIB (Inbox/Spam/All Mail dicari) — jeda baru ~1 menit, cek ulang 28 Nov. Status tetap Open.
+- **Retest result:** 28 Nov 2026, 08.44 WIB — OTP diminta lagi; kode tetap tampil di halaman OTP. Email reset Lupa Password yang diminta 27 Nov 08.47 WIB TIDAK DITEMUKAN di Gmail setelah ~24 jam (Inbox/Spam/All Mail dicari; email terbaru di Inbox wondr 28 Nov 02.25 WIB; Kredivo 27 Nov 08.40 WIB — 7 menit sebelum permintaan reset — juga tidak ada email IdBotani di antaranya) — keterlambatan kini tersingkir, pengiriman email situs bermasalah. Status tetap Open.
 
 ---
 
@@ -66,6 +68,7 @@
 - **Status:** Open
 - **Retest result:** 26 Nov 2026, 08:45 WIB — keenam kotak kode tetap terisi otomatis oleh halaman saat pertama tampil; verifikasi berhasil tanpa kode dari channel resmi. Status tetap Open.
 - **Retest result:** 27 Nov 2026, 08.44 WIB — keenam kotak kode tetap terisi otomatis ("Two Factor Code"); klik "Proses Token" → verifikasi berhasil, login selesai ke /main. Status tetap Open.
+- **Retest result:** 28 Nov 2026, 08.44–08.45 WIB — keenam kotak kode tetap terisi otomatis oleh halaman saat pertama tampil; klik "Proses Token" → verifikasi berhasil, login selesai ke /main. Status tetap Open.
 
 ---
 
@@ -89,6 +92,7 @@
 - **Status:** Open
 - **Retest result:** 26 Nov 2026, 08:46 WIB — tambah Wingko qty 1 → keranjang tercatat Qty 10, Subtotal/Total Rp 35.000, tanpa pemberitahuan minimal order. Status tetap Open.
 - **Retest result:** 27 Nov 2026, 08.44–08.45 WIB — keranjang awal kosong; tambah qty 1 → keranjang Qty 10, Subtotal Rp 35.000, Total 35.000, tanpa pemberitahuan (bukti step-02-retest-keranjang-2026-11-27.png). Status tetap Open.
+- **Retest result:** 28 Nov 2026, 08.46 WIB — keranjang awal kosong; tambah qty 1 → popup "Berhasil Ditambahkan" tanpa pemberitahuan; keranjang Qty 10, Subtotal Rp 35.000, Total Rp 35.000. Status tetap Open.
 
 ---
 
@@ -112,6 +116,7 @@
 - **Status:** Open
 - **Retest result:** 26 Nov 2026, 08:47 WIB — setelah hapus tanpa reload, ringkasan tetap Subtotal/Total Rp 35.000 + tombol 'Lanjut ke Pembayaran'; panel mini-keranjang masih menampilkan Wingko; setelah reload keranjang kosong. Status tetap Open.
 - **Retest result:** 27 Nov 2026, 08.45 WIB — setelah hapus tanpa reload, ringkasan tetap Subtotal/Total Rp 35.000 + tombol 'Lanjut ke Pembayaran'; daftar halaman masih memuat entri Wingko kedaluwarsa; setelah reload keranjang kosong. Status tetap Open.
+- **Retest result:** 28 Nov 2026, 08.46–08.47 WIB — setelah hapus tanpa reload, daftar keranjang, ringkasan (Subtotal/Total Rp 35.000 + tombol 'Lanjut ke Pembayaran'), panel mini-keranjang, dan badge 1 masih menampilkan item; sesaat kemudian area utama kosong dan badge 0, tetapi panel mini-keranjang MASIH menampilkan Wingko Qty.10 x3,500; setelah reload keranjang kosong di semua tempat. Status tetap Open.
 
 ---
 
@@ -135,6 +140,7 @@
 - **Status:** Open
 - **Retest result:** 26 Nov 2026, 08:43 WIB — harga detail Wingko tetap '3,500' tanpa 'Rp' (bukti: step-02-retest-detail-wingko-2026-11-26.png). Status tetap Open.
 - **Retest result:** 27 Nov 2026, 08.43 WIB — harga detail tetap '3,500' tanpa 'Rp' (bukti: step-03-retest-detail-wingko-2026-11-27.png; Dilihat 62–63 kali). Status tetap Open.
+- **Retest result:** 28 Nov 2026, 08.46 WIB — harga detail tetap '3,500' tanpa 'Rp' (bukti: step-04-retest-detail-wingko-2026-11-28.png; Dilihat 65 kali, 67 kali pada tangkapan Microlink sesudahnya). Status tetap Open.
 
 ---
 
@@ -157,4 +163,5 @@
 - **Reporter / date:** RAMA NITTIA KHADIFA / 26 Nov 2026
 - **Status:** Open
 - **Retest result:** 27 Nov 2026, 08.46 WIB — dicek SAAT LOGIN sebagai ramanitiak: Daftar Produk tetap tidak ada di /k/ojek (bukti: step-02-ojek-login-2026-11-27.png). Login bukan penyebab; fitur memang tidak ada di halaman. Status tetap Open.
+- **Retest result:** 28 Nov 2026, 08.47 WIB — dicek SAAT LOGIN sebagai ramanitiak: Daftar Produk tetap tidak ada di /k/ojek (hanya Instant/Regular, Nama, No. WA, Alamat Jemput/Tujuan, Hitung Ongkir, Catatan, "Pesan Sekarang", "History Pemesanan — Belum ada history"). Formulir tidak diisi/dikirim. Status tetap Open.
 - **Catatan:** Precondition IDB-BB-015 perlu ditinjau — bukan soal login.
