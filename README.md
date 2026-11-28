@@ -2,6 +2,56 @@
 
 Repositori ini disusun sebagai dokumentasi resmi kegiatan pengujian perangkat lunak (_Software Testing & Quality Assurance_) terhadap aplikasi berbasis web **Idbotani** (`https://idbotani.com/`). Proyek ini dibuat untuk memenuhi tugas kelompok mata kuliah **Testing & QA Perangkat Lunak** di **Universitas Pamulang**.
 
+## 🗓️ Timeline Pengujian (Week 0–8)
+
+Jadwal pelaksanaan pengujian mengikuti _QA Testing Idbotani Project Plan_ (Week 0–8, per 28 Nov 2026).
+Tanda ■ = minggu terjadwal untuk kegiatan tersebut.
+
+![Timeline QA Testing Idbotani — Week 0–8](01-Project-Overview/Timeline_per_28_nov.jpeg)
+
+Dokumen sumber: [Timeline QA Testing Botani new.pdf](01-Project-Overview/Timeline%20QA%20Testing%20Botani%20new.pdf) dan [Timeline QA Testing Botani.xlsx](01-Project-Overview/Timeline%20QA%20Testing%20Botani.xlsx) di `01-Project-Overview/`.
+
+| Kegiatan | PIC | W0 | W1 | W2 | W3 | W4 | W5 | W6 | W7 | W8 |
+| -------- | --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **I — Inisiasi & Persiapan Pengujian (Planning & Setup)** | All Team |  |  |  |  |  |  |  |  |  |
+| Penentuan objek uji (Idbotani) dan pembagian 4 role tim | QA Lead | ■ |  |  |  |  |  |  |  |  |
+| Penyusunan Project Overview, ruang lingkup (In-Scope / Out-of-Scope), dan batasan etis | QA Lead | ■ |  |  |  |  |  |  |  |  |
+| Studi standar referensi pengujian (ISO/IEC/IEEE 29119-1, 2, 3, 4) | QA Lead & Functional QA & UI/UX Tester | ■ |  |  |  |  |  |  |  |  |
+| Penyusunan Test Plan (jadwal, kriteria lulus/gagal, dan format dokumentasi) | QA Lead | ■ |  |  |  |  |  |  |  |  |
+| Penyiapan perangkat & browser uji (Chrome, Firefox, Edge — Desktop & Mobile) | UI/UX Tester |  | ■ |  |  |  |  |  |  |  |
+| Penyiapan template Test Case, Test Execution Log, dan Bug Report | QA Lead |  | ■ | ■ |  |  |  |  |  |  |
+| Pemetaan alur fitur utama (Halaman Login, Katalog, OJEK, Konfirmasi) | QA Lead & Functional QA & UI/UX Tester |  | ■ |  |  |  |  |  |  |  |
+| **II — Perancangan Skenario & Test Case (Test Design)** | Functional QA |  |  |  |  |  |  |  |  |  |
+| Pembuatan Test Case (skenario positif & negatif) per modul | Functional QA |  |  | ■ | ■ |  |  |  |  |  |
+| Modul Autentikasi & Akun (Email/WA OTP, Google Login, Lupa Password) | Functional QA Auth |  |  |  | ■ |  |  |  |  |  |
+| Modul Katalog, Pencarian, Filter Kategori, dan Keranjang Belanja | Functional QA E-Commerce |  |  |  |  | ■ |  |  |  |  |
+| Modul Layanan OJEK (Peta, Ongkir, Kurir) & Konfirmasi Pesanan | Functional QA E-Commerce |  |  |  |  | ■ | ■ |  |  |  |
+| Modul UI/UX, Modal/Pop-up, Pengalih Bahasa (ID/EN/ZH), dan Responsivitas | UI/UX Tester |  |  |  |  |  | ■ | ■ |  |  |
+| Review dan persetujuan kelengkapan Test Case sebelum eksekusi | QA Lead |  |  |  |  |  |  |  | ■ |  |
+| **III — Eksekusi Pengujian (Test Execution)** | Functional QA |  |  |  |  |  |  |  |  |  |
+| Eksekusi Test Case Modul Autentikasi & Akun (validasi non-destruktif) | Functional QA Auth |  |  |  | ■ |  |  |  |  |  |
+| Eksekusi Test Case Modul Katalog, Pencarian & Keranjang Belanja | Functional QA E-Commerce |  |  |  |  | ■ |  |  |  |  |
+| Eksekusi Test Case Modul Layanan OJEK & Konfirmasi Pesanan | Functional QA E-Commerce |  |  |  |  | ■ | ■ |  |  |  |
+| Eksekusi uji UI/UX, Cross-Browser, dan responsivitas layar Mobile | UI/UX Tester |  |  |  |  |  |  | ■ |  |  |
+| Pengisian Test Execution Log & pengambilan screenshot bukti hasil uji | QA Lead & Functional QA & UI/UX Tester |  |  |  |  |  |  | ■ | ■ |  |
+| Pencatatan temuan bug ke Bug / Incident Report (lengkap dengan severity) | QA Lead & Functional QA & UI/UX Tester |  |  |  |  |  |  | ■ | ■ |  |
+| **IV — Verifikasi & Cross-Testing (Re-Testing)** | QA Lead & Functional QA & UI/UX Tester |  |  |  |  |  |  |  |  |  |
+| Cross-check dan reproduksi ulang temuan bug oleh anggota lain | QA Lead & Functional QA & UI/UX Tester |  |  |  |  |  |  |  | ■ |  |
+| Validasi ulang status seluruh Test Case (Pass / Fail / Blocked) | QA Lead |  |  |  |  |  |  |  | ■ |  |
+| Penyusunan ringkasan metrik hasil uji (total skenario, persentase pass/fail) | QA Lead |  |  |  |  |  |  |  | ■ |  |
+| Wawancara & saran dari ahli atau profesional | Seluruh Team |  |  |  |  |  |  |  |  | ■ |
+| **V — Dokumentasi Akhir & Pengumpulan (Sign-Off)** | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+| Kompilasi Test Summary / Completion Report mengacu format ISO/IEC/IEEE 29119-3; finalisasi tata letak laporan, lampiran screenshot, dan daftar pustaka | QA Lead; QA Lead & Functional QA & UI/UX Tester |  |  |  |  |  |  |  |  | ■ |
+| Review akhir kelompok dan pengumpulan tugas | QA Lead |  |  |  |  |  |  |  |  | ■ |
+| **VI — Resource Summary** | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+| Sumber Daya Manusia: 4 Anggota Tim (QA Lead, 2 Functional QA, 1 UI/UX Tester) | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+| Objek Uji: Website Idbotani (Live Production, Non-Destruktif) | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+| Perangkat & Browser: Laptop/PC, Smartphone, Chrome, Firefox, Edge | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+| Tools Dokumentasi: Google Docs, Google Sheets, Screenshot/Screen Recorder | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+| Standar Referensi: ISO/IEC/IEEE 29119 (Part 1–4) | QA Lead & Team |  |  |  |  |  |  |  |  |  |
+
+> Pembagian peran: QA Lead Sabil, QA Auth Rama, QA E-Commerce Fabian, UI/UX Fachriz.
+
 ## 📋 Identitas Penyusun
 
 ### Anggota Kelompok
@@ -94,24 +144,10 @@ Berikut adalah struktur direktori yang digunakan untuk mengorganisasi dokumen pe
 ├── 04-Test-Cases/               # test-cases.csv (IDB-BB-001 s.d. 018)
 ├── 05-Manual-Testing/           # Log eksekusi 25–27 Nov, evidence, metrik
 ├── 06-Automation-Testing/       # Skrip Playwright read-only, regression plan
-├── 07-Bug-Reports/              # Bug_Report_Idbotani.md (IDB-BUG-001 s.d. 006)
+├── 07-Bug-Reports/              # Bug_Report_Idbotani.md (IDB-BUG-001 s.d. 006) + IDB-BUG-007 (28 Nov 2026)
 ├── 08-Interview/                # Pertanyaan wawancara (belum dilakukan)
 └── 09-Final-Report/             # Draf laporan akhir (laporan-akhir-qa-idbotani.md)
 ```
-
-## 🗓️ Timeline Pengujian
-
-Jadwal pelaksanaan pengujian mengikuti rencana 6 fase (Week 0–8) pada dokumen
-[Timeline QA Testing Botani new.pdf](01-Project-Overview/Timeline%20QA%20Testing%20Botani%20new.pdf).
-
-| Fase | Kegiatan | PIC |
-| ---- | -------- | --- |
-| I | Inisiasi & Persiapan Pengujian (Planning & Setup) — penentuan objek uji, Project Overview & ruang lingkup, studi standar ISO/IEC/IEEE 29119, Test Plan, penyiapan perangkat/browser & template | All Team |
-| II | Perancangan Skenario & Test Case (Test Design) — Test Case per modul: Autentikasi & Akun, Katalog/Pencarian/Keranjang, OJEK & Konfirmasi, UI/UX/Bahasa/Responsivitas; review & persetujuan Test Case | Functional QA |
-| III | Eksekusi Pengujian (Test Execution) — eksekusi per modul, Execution Log & screenshot bukti, pencatatan bug ke Bug Report | Functional QA |
-| IV | Verifikasi & Cross-Testing (Re-Testing) — cross-check bug, validasi ulang status Test Case, ringkasan metrik, wawancara ahli/profesional | QA Lead & Team |
-| V | Dokumentasi Akhir & Pengumpulan (Sign-Off) — Test Summary mengacu ISO/IEC/IEEE 29119-3, review akhir & pengumpulan | QA Lead & Team |
-| VI | Resource Summary — 4 anggota tim, objek uji IdBotani (live, non-destruktif), perangkat & browser, tools dokumentasi, standar ISO 29119 | QA Lead & Team |
 
 ## 📊 Ringkasan Hasil Pengujian
 
@@ -130,8 +166,8 @@ jadi belum masuk hitungan di bawah ini.
 | Antarmuka & Responsivitas      |        `5`        |   `5`    |   `0`    |    `0`    |         `100%`          |
 | **Total Keseluruhan**          |      **`18`**     | **`15`** | **`1`**  |  **`2`**  |        **`83%`**        |
 
-Catatan: 6 bug masih Open (IDB-BUG-001 s.d. 006, 2 High/P1 soal OTP).
-Lihat `07-Bug-Reports/Bug_Report_Idbotani.md`.
+Catatan: 7 bug masih Open (IDB-BUG-001 s.d. 007, 2 High/P1 soal OTP; IDB-BUG-007 Critical/P1 — homepage 403 Forbidden, 28 Nov 2026).
+Lihat `07-Bug-Reports/IDB-BUG-007-homepage-403-forbidden.md` dan Issue #1.
 
 ## ⚠️ Pernyataan Akademik (_Disclaimer_)
 
