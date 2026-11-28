@@ -11,7 +11,7 @@ Repositori ini disusun sebagai dokumentasi resmi kegiatan pengujian perangkat lu
 |  1  | `Fabian Jason Song`         | `231011400173` |
 |  2  | `M Fachris Aziz Wantah`     | `231011402121` |
 |  3  | `M Sabiilul Hikam Azzuhrie` | `231011400198` |
-|  4  | `Ramaniitia Khadifa`        | `231011403642` |
+|  4  | `Rama Niitia Khadifa`        | `231011403642` |
 
 ### Informasi Akademik
 
