@@ -11,6 +11,7 @@
 | IDB-BUG-005 | IDB-BB-005 | 05-Manual-Testing/testing-evidence/IDB-BB-005/step-01-detail-wingko.png | Detail Wingko: harga "3,500" tanpa "Rp" |
 | IDB-BUG-005 | IDB-BB-005 | 05-Manual-Testing/testing-evidence/IDB-BB-005/step-02-retest-detail-wingko-2026-11-26.png | Retest 26 Nov 2026: harga detail tetap "3,500" tanpa "Rp" (Dilihat 59 kali) |
 | IDB-BUG-005 | IDB-BB-005 | 05-Manual-Testing/testing-evidence/IDB-BB-005/step-03-retest-detail-wingko-2026-11-27.png | Retest 27 Nov 2026: harga detail tetap "3,500" tanpa "Rp" (Dilihat 62–63 kali) |
+| IDB-BUG-005 | IDB-BB-005 | 05-Manual-Testing/testing-evidence/IDB-BB-005/step-04-retest-detail-wingko-2026-11-28.png | Retest 28 Nov 2026: harga detail tetap "3,500" tanpa "Rp" (Dilihat 65–67 kali) |
 | IDB-BUG-005 | IDB-BB-005 | 05-Manual-Testing/testing-evidence/IDB-BB-005/execution-notes.md | Catatan eksekusi detail produk |
 | IDB-BUG-006 | IDB-BB-015 | 05-Manual-Testing/testing-evidence/IDB-BB-015/step-01-tanpa-daftar-produk.png | Halaman /k/ojek tanpa bagian Daftar Produk (sebagai tamu) |
 | IDB-BUG-006 | IDB-BB-015 | 05-Manual-Testing/testing-evidence/IDB-BB-015/execution-notes.md | Catatan eksekusi OJEK: Daftar Produk tidak tampil |
