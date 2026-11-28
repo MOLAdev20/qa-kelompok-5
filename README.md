@@ -8,6 +8,42 @@ Repositori ini disusun sebagai dokumentasi resmi kegiatan pengujian perangkat lu
 
 Jadwal pelaksanaan pengujian mengikuti _QA Testing Idbotani Project Plan_ (Week 0–8, sampai Sign-Off di Week 8). Dokumen sumber: [Timeline QA Testing Botani new.pdf](01-Project-Overview/Timeline%20QA%20Testing%20Botani%20new.pdf) dan [Timeline QA Testing Botani.xlsx](01-Project-Overview/Timeline%20QA%20Testing%20Botani.xlsx).
 
+## 🧪 Plan Pengetesan (Sesuai ISO)
+
+Plan pengetesan mengikuti panduan standar yang dipilih kelompok. Detail lengkap ada di [03-QA-Planning/metode-pengetesan.md](https://github.com/MOLAdev20/qa-kelompok-5/blob/master/03-QA-Planning/metode-pengetesan.md).
+
+**Acuan standar** (lihat [02-Standards-References](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/02-Standards-References)):
+
+- **ISO/IEC/IEEE 29119-1:2022** — konsep umum dan terminologi software testing.
+- **ISO/IEC/IEEE 29119-2:2021** — proses pengujian: mengatur, mengelola, dan melaksanakan pengujian. \*
+- **ISO/IEC 25010:2023** — model kualitas produk (9 karakteristik) sebagai dasar pemilihan jenis pengujian.
+- **ISO/IEC 25002:2024** — panduan penggunaan model kualitas SQuaRE.
+
+\* 29119-2 terbit 2021, di luar rentang 2022–2026 — dipakai sebagai pengecualian atas persetujuan dosen.
+
+**Langkah proses yang harus dilakukan:**
+
+1. Tetapkan konteks, tujuan, ruang lingkup, batasan, risiko, dan kriteria pengujian.
+2. Susun strategi dan rencana pengujian (test plan, jadwal, kriteria masuk/keluar).
+3. Analisis basis uji, lalu rancang kondisi dan test case (IDB-BB-001 s.d. 018).
+4. Siapkan lingkungan dan data uji yang diizinkan (Chrome, Firefox, Edge — Desktop & Mobile; akun uji; data dummy).
+5. Jalankan pengujian manual dan otomatis (Playwright read-only).
+6. Catat hasil aktual, evidence (screenshot), dan defect di Bug Report.
+7. Evaluasi hasil, retest, regression test, lalu susun laporan akhir.
+
+**Metode pengetesan:**
+
+| Metode | Yang harus diuji | Test case |
+| --- | --- | --- |
+| **Black-box** (metode utama) | Perilaku semua modul dari sisi pengguna: beranda, navigasi, pencarian, detail produk, autentikasi, keranjang, OJEK, UI/UX & bahasa — skenario positif & negatif, _equivalence partitioning_, _boundary value analysis_ | IDB-BB-001 s.d. 018 |
+| **Grey-box** | Integrasi dan validasi alur, bila pengelola memberi dokumentasi API / info internal terbatas | Sesuai akses yang diberikan |
+| **White-box** | Struktur kode dan jalur logika — hanya bila source code dan izin tersedia; saat ini **BLOCKED** | — |
+| **Automation** (Playwright) | Smoke test dan regression test pada skenario stabil, di lingkungan yang disetujui | Skenario stabil |
+
+**Jenis pengujian per karakteristik kualitas (ISO 25010:2023):** fungsional, usability & interaksi, kompatibilitas lintas browser/perangkat, performa non-destruktif (staging saja), reliabilitas (pengulangan & retest), keamanan terbatas (berizin, tanpa pengujian invasif).
+
+> **Yang masih tertahan:** IDB-BB-008 (pesanan) dan IDB-BB-009 (pelacakan) **BLOCKED** — butuh sandbox dan akun uji. Smoke test beranda (IDB-BB-001) tertahan karena homepage mengembalikan `403 Forbidden` sejak 28 Nov 2026 (IDB-BUG-007, Critical/P1) sampai layanan pulih.
+
 ## 🧭 Jelajahi Repositori
 
 Klik tautan di bawah untuk langsung membuka folder yang dicari, tanpa menelusuri repositori satu per satu:
