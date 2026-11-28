@@ -22,14 +22,6 @@ Klik tautan di bawah untuk langsung membuka folder yang dicari, tanpa menelusuri
 - [08-Interview](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/08-Interview) — pertanyaan wawancara
 - [09-Final-Report](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/09-Final-Report) — draf laporan akhir
 
-## 📝 Catatan Dosen
-
-Sesuai arahan dosen pengampu:
-
-- Acuan plan testing berdasarkan standar ISO yang dipilih kelompok: **ISO/IEC/IEEE 29119** (Part 1–4) untuk proses dan dokumentasi pengujian, dan **ISO/IEC 25010** untuk model kualitas produk. Lihat [02-Standards-References](https://github.com/MOLAdev20/qa-kelompok-5/tree/master/02-Standards-References).
-- Timeline pengujian ditaruh di halaman depan README ini (bagian 🗓️ Timeline Pengujian di atas).
-- README dibuat interaktif: tidak perlu masuk-masuk folder — setiap bagian dilengkapi tautan langsung ke folder/file terkait (lihat 🧭 Jelajahi Repositori di atas), jadi pemeriksa bisa langsung membuka folder yang dicari.
-
 ## 📋 Identitas Penyusun
 
 ### Anggota Kelompok
