@@ -28,3 +28,11 @@ TETAP TIDAK ADA bagian "Daftar Produk" maupun field nama produk/qty — meski su
 
 ## Bukti
 `05-Manual-Testing/testing-evidence/IDB-BB-015/step-02-ojek-login-2026-11-27.png` (tangkapan halaman /k/ojek saat login, 27 Nov 2026, 08.46 WIB; PDF browser dikonversi ke PNG).
+
+## Re-check saat login — 28 November 2026, 08.47 WIB
+
+Login sebagai ramanitiak, buka https://idbotani.com/k/ojek. Halaman "Pesan Layanan Kurir" hanya berisi tombol Instant/Regular, field Nama lengkap, No. WhatsApp, Alamat Jemput/Tujuan, tombol "Hitung Ongkir", "Catatan (opsional)", tombol "Pesan Sekarang", dan "History Pemesanan — Belum ada history pemesanan."
+
+TETAP TIDAK ADA bagian "Daftar Produk" maupun field nama produk/qty — meski sudah login. IDB-BUG-006 tetap Open; login bukan penyebab. Formulir tidak diisi dan tidak dikirim.
+
+Catatan: halaman /k/ojek saat login tidak bisa di-capture jadi PNG lewat Microlink — bukti PNG re-check hari ini tidak ada; hasil dicatat di notes ini.
